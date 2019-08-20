@@ -1,2 +1,2 @@
-# fugo-template
+# fuggo-template
 Fuggo templating
