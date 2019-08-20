@@ -1,7 +1,9 @@
 <?php
-declare(strict_types = 1)
-   ;
 namespace FuggoTemplate\Tests\Unit;
+
+/* @formatter:off */
+declare(strict_types = 1); /* @formatter:on */
+
 
 use PHPUnit\Framework\TestCase;
 use FuggoTemplate\LineParserTrait;
@@ -17,7 +19,7 @@ class LineParserTraitTest extends TestCase {
       $a[] = $paramVal = [
          $paramKey => 'my param 1 value',
       ];
-      $a[] = 'line ' . $line . ' stuff '.$paramVal[$paramKey].' more stuff';
+      $a[] = 'line ' . $line . ' stuff ' . $paramVal[$paramKey] . ' more stuff';
       $arg[] = $a;
 
       $a = [];
@@ -27,7 +29,7 @@ class LineParserTraitTest extends TestCase {
       $a[] = $paramVal = [
          $paramKey => 'my param 1 value',
       ];
-      $a[] = 'line ' . $line . ' stuff '.$paramVal[$paramKey].' more stuff';
+      $a[] = 'line ' . $line . ' stuff ' . $paramVal[$paramKey] . ' more stuff';
       $arg[] = $a;
 
       return $arg;
@@ -35,7 +37,7 @@ class LineParserTraitTest extends TestCase {
    /**
     * @dataProvider bodyStringProvider
     */
-   public function testBodyFromString(string $unparsedLine,array $paramVal,string $expectedParsedValue) {
+   public function testBodyFromString(string $unparsedLine, array $paramVal, string $expectedParsedValue) {
       $lineParser = new class($unparsedLine) {
          use LineParserTrait;
          public $parsedLine;
@@ -43,5 +45,6 @@ class LineParserTraitTest extends TestCase {
             $this->parsedLine = static::parseTemplateLine($line);
          }
       };
-      $this->assertEquals($lineParser->getLine,$expectedParsedValue);   }
+      $this->assertEquals($lineParser->getLine,$expectedParsedValue);
+   }
 }
