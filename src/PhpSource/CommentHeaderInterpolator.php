@@ -12,7 +12,7 @@ class CommentHeaderInterpolator extends Lexer\LineDispatcher {
       $originalLineListenerProvider->addListener(function(Lexer\Line $line) use(&$firstLine) {
          $token = token_get_all($line);
          if (null===($token = array_shift($token)) && $firstLine) {
-            
+            throw new ParseErrorException('first line must be');
          }
          
          $this->dispatch($line);

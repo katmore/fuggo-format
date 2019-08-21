@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
-use FuggoFormat\LineListenerProvider;
-use FuggoFormat\InterpolatedLine;
-use FuggoFormat\PhpSource\CommentHeaderInterpolator;
+use FuggoFormat\Io;
+use FuggoFormat\Lexer;
+use FuggoFormat\PhpSource;
 
 /*
  * adds header comment to a PHP source file
@@ -127,12 +127,15 @@ new class() {
          return;
       }
 
-      $lineEvent = new LineListenerProvider();
-      $lineEvent->addListener(function (InterpolatedLine $line) {
+      $interpolatedLineListenerProvider = new Lexer\LineListenerProvider();
+      $originalLineListenerProvider = new Lexer\LineListenerProvider();
+      
+      new PhpSource\CommentHeaderInterpolator($interpolatedLineListenerProvider, $originalLineListenerProvider);
+      //new PhpSource\CommentHeaderInterpolator
+      
+      $interpolatedLineListenerProvider->addListener(function (Lexer\Line $line) {
          echo "interpolated line: $line\n";
       });
-
-      new CommentHeaderInterpolator($lineEvent);
 
       exit(4);
 

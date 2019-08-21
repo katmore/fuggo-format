@@ -1,8 +1,7 @@
 <?php
-namespace FuggoFormat\Tests\Unit;
+declare(strict_types = 1);
 
-/* @formatter:off */
-declare(strict_types = 1); /* @formatter:on */
+namespace FuggoFormat\Tests\Unit\Template;
 
 
 use PHPUnit\Framework\TestCase;
