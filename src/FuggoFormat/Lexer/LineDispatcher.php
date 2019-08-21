@@ -1,5 +1,5 @@
 <?php
-namespace FuggoFormat;
+namespace FuggoFormat\Lexer;
 
 use Psr\EventDispatcher;
 
