@@ -1,5 +1,5 @@
 <?php
-namespace FuggoTemplate;
+namespace FuggoFormat\Template;
 
 use RuntimeException;
 use Throwable;

@@ -17,17 +17,6 @@ USAGE;
       'author'=>['D. Bird <retran@gmail.com>'],
    ];
    
-   const SOURCE_COMMENT_HEADER = <<<HEADER
-/*
- * This file is part of the fuggo-template package.
- *
- * (c) D. Bird <retran@gmail.com>, All Rights Reserved.
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-HEADER;
-   
    public function __construct() {
       global $argv;
       $offset = null;

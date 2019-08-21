@@ -1,5 +1,5 @@
 <?php
-namespace FuggoTemplate;
+namespace FuggoFormat\Template;
 
 interface LineParserInterface {
    const SYMBOL_PARAM_START = '{%';

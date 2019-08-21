@@ -1,5 +1,5 @@
 <?php
-namespace FuggoTemplate;
+namespace FuggoFormat\Template;
 
 trait LineParserTrait {
    

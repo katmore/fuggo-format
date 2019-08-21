@@ -1,24 +1,25 @@
 {
-	"name": "katmore/fuggo-template",
+	"name": "katmore/fuggo-format",
 	"description": "composer.json",
-	"homepage": "https://github.com/katmore/fuggo-template",
+	"homepage": "https://github.com/katmore/fuggo-format",
 	"license": [
 		"MIT",
 		"GPL-3.0+"
 	],
 	"require": {
 		"php": ">=7.2.1",
-		"psr/http-message": "^1.0"
+		"psr/http-message": "^1.0",
+		"fig/event-dispatcher-util": "^1.1"
 	},
 	"autoload": {
 		"psr-4": {
-			"FuggoTemplate\\": "src"
+			"FuggoFormat\\": "src"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"FuggoTemplate\\TestCase\\": "tests/phpunit/TestCase",
-			"FuggoTemplate\\Tests\\": "tests/phpunit/Tests"
+			"FuggoFormat\\TestCase\\": "tests/phpunit/TestCase",
+			"FuggoFormat\\Tests\\": "tests/phpunit/Tests"
 		}
 	},
 	"require-dev": {

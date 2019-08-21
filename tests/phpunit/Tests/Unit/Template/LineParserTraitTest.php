@@ -1,12 +1,12 @@
 <?php
-namespace FuggoTemplate\Tests\Unit;
+namespace FuggoFormat\Tests\Unit;
 
 /* @formatter:off */
 declare(strict_types = 1); /* @formatter:on */
 
 
 use PHPUnit\Framework\TestCase;
-use FuggoTemplate\LineParserTrait;
+use FuggoFormat\Template\LineParserTrait;
 
 class LineParserTraitTest extends TestCase {
    public function templateLineProvider(): array {

@@ -15,7 +15,7 @@
       <ini name="memory_limit" value="-1" />
    </php>
     <testsuites>
-        <testsuite name="FuggoTemplate Unit Test Suite">
+        <testsuite name="FuggoFormat Unit Test Suite">
             <directory suffix="Test.php">./tests/phpunit/Tests/Unit</directory>
         </testsuite>
     </testsuites>
